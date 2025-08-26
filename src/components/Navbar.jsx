@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/logo.jpg";
+import clock from "../assets/clock.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,17 +11,16 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo + Company Name */}
       <div className="logo-section">
-        <img src="src/assets/logo.jpg" alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo" />
         <span className="company-name">Docs Service</span>
       </div>
 
       {/* Menu Links */}
       <div className={`menu ${isOpen ? "open" : ""}`}>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-        
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/contact">Contact</Link>
       </div>
 
       {/* Hamburger / Close Button */}
@@ -26,9 +28,10 @@ const Navbar = () => {
         {isOpen ? "✖" : "☰"}
       </div>
 
+      {/* Clock Section */}
       <div className="clock">
-        <img src="src/assets/clock.jpg"  alt="clock" className="clock-logo"/>
-        <span > 24*7</span>
+        <img src={clock} alt="clock" className="clock-logo" />
+        <span>24×7</span>
       </div>
     </nav>
   );

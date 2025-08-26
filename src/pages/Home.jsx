@@ -5,6 +5,7 @@ import AboutIntro from '../components/AboutIntro'
 import ServiceIntro from '../components/ServiceIntro'
 import '../components/ServiceIntro.css' 
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
             <Link to="/service"  className='more-button'> For more service</Link>
           </div>
         </div>
+        <Footer />
     </div>
   )
 }
