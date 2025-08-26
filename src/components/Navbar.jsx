@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className={`menu ${isOpen ? "open" : ""}`}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
+        <Link to="/service">Service</Link>
         <Link to="/contact">Contact</Link>
       </div>
 
