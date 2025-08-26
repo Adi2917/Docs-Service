@@ -1,0 +1,117 @@
+/* Section Background */
+.intro {
+    background: linear-gradient(135deg, #f0f7ff, #e8f0ff);
+    padding: 80px 20px;
+  }
+  
+  /* Grid Container */
+  .intro__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  /* Responsive grid (tablet + mobile) */
+  @media (max-width: 900px) {
+    .intro__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .intro__visual {
+      margin-top: 30px;
+      position: relative;
+      min-height: 220px;
+    }
+  
+    .doc-image {
+      position: relative;
+      margin: 0 10px;
+    }
+  }
+  
+  /* Title */
+  .intro__title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+  
+  /* Description */
+  .intro__desc {
+    font-size: clamp(16px, 2vw, 18px);
+    color: #374151;
+    margin-bottom: 28px;
+    max-width: 480px;
+  }
+  
+  /* Button */
+  .intro__btn {
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .intro__btn:hover {
+    background: #1d4ed8;
+  }
+  
+  /* Right Side Visual */
+  .intro__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+  }
+  
+  /* Images */
+  .doc-image {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Small Doc */
+  .doc-image.small {
+    width: 100px;
+    bottom: 20px;
+    left: 15%;
+    z-index: 2;
+  }
+  
+  /* Large Clipboard */
+  .doc-image.large {
+    width: 30em;
+    right: 15%;
+    z-index: 1;
+  }
+  
+  /* For very small screens (mobile < 500px) */
+  @media (max-width: 500px) {
+    .doc-image.small {
+      width: 70px;
+      bottom: 10px;
+      left: 10%;
+    }
+  
+    .doc-image.large {
+      width: 120px;
+      top: 0;
+      right: 10%;
+    }
+  }
+  
