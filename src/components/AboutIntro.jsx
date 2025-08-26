@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutIntro.css";
+import aboutintro from "../assets/About-Intro.png"
 
 const AboutIntro = () => {
   return (
@@ -30,7 +31,7 @@ const AboutIntro = () => {
         {/* Right Side Image */}
         <div className="about__visual">
           <img
-            src="src/assets/About-Intro.png"   // apna image path yahan do
+            src={aboutintro}   // apna image path yahan do
             alt="About Documents"
             className="about__image"
           />

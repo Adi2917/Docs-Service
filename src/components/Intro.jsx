@@ -1,5 +1,6 @@
 import React from "react";
 import "./Intro.css";
+import intro from "../assets/intro-img.png"
 
 const Intro = () => {
   return (
@@ -20,7 +21,7 @@ const Intro = () => {
         {/* Right Side */}
         <div className="intro__visual">
           <img
-            src="src/assets/intro-img.png"  // dusri image ka path do
+            src={intro}  // dusri image ka path do
             alt="Clipboard"
             className="doc-image large"
           />
